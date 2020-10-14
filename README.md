@@ -42,7 +42,7 @@ Run
 
 ## Authors
 
-**Oscar Mier**
+👤 **Oscar Mier**
 
 - Github: [@voscarmv](https://github.com/voscarmv)
 - Twitter: [@voscarmv](https://twitter.com/voscarmv)
