@@ -1,5 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import Book from "../components/Book";
 
 const BooksList = () => {
   const books = useSelector((state) => state.bookStoreState.books);
@@ -10,22 +11,18 @@ const BooksList = () => {
         <thead>
           <tr>
             <td>Title</td>
+            <td>Category</td>
+            <td>ISBN</td>
           </tr>
         </thead>
         <tbody>
-        {books.map(
-          (book) => {
-            return (
-              <tr key={book.id}>
-                <td>{book.title}</td>
-              </tr>
-            )
-          }
-        )}
+          {books.map((book) => (
+            <Book key={book.isbn} book={book} />
+          ))}
         </tbody>
       </table>
     </div>
-  )
+  );
 };
 
 export default BooksList;
