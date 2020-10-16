@@ -1,7 +1,18 @@
 import React from 'react';
+import BooksForm from '../containers/BooksForm';
+import BooksList from '../containers/BooksList';
+import { Provider } from 'react-redux';
+import store from '../store';
 
 function App() {
-  return <h1>Something</h1>;
+  return (
+    <Provider store={store}>
+      <div>
+        <BooksList />
+        <BooksForm />
+      </div>
+    </Provider>
+  );
 }
 
 export default App;
