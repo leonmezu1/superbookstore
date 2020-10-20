@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 
-import { CREATEBOOK, UPDATEBOOK } from '../types/types';
+import { CREATEBOOK, REMOVEBOOK, UPDATEBOOK } from '../types/types';
 
 const initialState = {
   books: [
@@ -24,6 +24,11 @@ const initialState = {
 
 export default (state = initialState, action) => {
   switch (action.type) {
+    case CREATEBOOK:
+      return {
+        ...state,
+        books: [...state.books, action.book],
+      };
     default:
       return state;
   }

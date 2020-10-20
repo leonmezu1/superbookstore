@@ -13,6 +13,7 @@ const BooksForm = () => {
 
   const [bookInfo, setBookInfo] = useState({
     title: '',
+    isbn: '',
     category: '',
   });
 

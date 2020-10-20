@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 // importing from types
 
-import { CREATEBOOK, UPDATEBOOK } from '../types/types';
+import { CREATEBOOK, REMOVEBOOK, UPDATEBOOK } from '../types/types';
 
 // Add actions handlers later
