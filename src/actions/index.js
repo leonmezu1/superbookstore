@@ -12,7 +12,7 @@ const deleteBook = book => ({
 
 export const createBookAction = book => dispatch => {
   const newBook = book;
-  newBook.isbn = Math.floor(Math.random() * 100).toString();
+  newBook.id = Math.floor(Math.random() * 100).toString();
   dispatch(createBook(newBook));
 };
 
