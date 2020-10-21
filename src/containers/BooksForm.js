@@ -28,7 +28,6 @@ const BooksForm = () => {
   };
 
   const submitBook = e => {
-    // It's gonna do something
     e.preventDefault();
     if (book.title === '') return;
     dispatch(createBookAction(book));
