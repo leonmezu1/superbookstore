@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { createBookAction } from '../actions';
 
 const BooksForm = () => {
+  const dispatch = useDispatch();
   const categoryArray = [
     'Action',
     'Biography',
@@ -11,15 +14,15 @@ const BooksForm = () => {
     'Sci-Fi',
   ];
 
-  const [bookInfo, setBookInfo] = useState({
+  const [book, setbook] = useState({
     title: '',
     isbn: '',
     category: '',
   });
 
   const onSelectChange = e => {
-    setBookInfo({
-      ...bookInfo,
+    setbook({
+      ...book,
       [e.target.name]: e.target.value,
     });
   };
@@ -27,6 +30,8 @@ const BooksForm = () => {
   const submitBook = e => {
     // It's gonna do something
     e.preventDefault();
+    if (book.title === '') return;
+    dispatch(createBookAction(book));
   };
 
   return (
@@ -48,7 +53,7 @@ const BooksForm = () => {
           <select name="category" onChange={onSelectChange}>
             <option value="">Select a category</option>
             {categoryArray.map(category => (
-              <option key="" value={category}>
+              <option key={category} value={category}>
                 {category}
               </option>
             ))}

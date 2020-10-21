@@ -2,4 +2,3 @@
 
 export const CREATEBOOK = 'CREATEBOOK';
 export const REMOVEBOOK = 'REMOVEBOOK';
-export const UPDATEBOOK = 'UPDATEBOOK';

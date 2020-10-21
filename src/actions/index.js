@@ -1,6 +1,21 @@
-/* eslint-disable no-unused-vars */
-// importing from types
+import { CREATEBOOK, REMOVEBOOK } from '../types';
 
-import { CREATEBOOK, REMOVEBOOK, UPDATEBOOK } from '../types/types';
+const createBook = book => ({
+  type: CREATEBOOK,
+  book,
+});
 
-// Add actions handlers later
+const deleteBook = book => ({
+  type: REMOVEBOOK,
+  book,
+});
+
+export const createBookAction = book => dispatch => {
+  const newBook = book;
+  newBook.isbn = Math.floor(Math.random() * 100).toString();
+  dispatch(createBook(newBook));
+};
+
+export const deleteBookAction = book => dispatch => {
+  dispatch(deleteBook(book));
+};
