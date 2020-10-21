@@ -12,12 +12,12 @@ const BooksList = () => {
           <tr>
             <td>Title</td>
             <td>Category</td>
-            <td>ISBN</td>
+            <td>id</td>
           </tr>
         </thead>
         <tbody>
           {books.map(book => (
-            <Book key={book.isbn} book={book} />
+            <Book key={book.id} book={book} />
           ))}
         </tbody>
       </table>

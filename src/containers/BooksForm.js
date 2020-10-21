@@ -16,7 +16,7 @@ const BooksForm = () => {
 
   const [book, setbook] = useState({
     title: '',
-    isbn: '',
+    id: '',
     category: '',
   });
 
