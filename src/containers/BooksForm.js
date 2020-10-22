@@ -29,8 +29,13 @@ const BooksForm = () => {
 
   const submitBook = e => {
     e.preventDefault();
-    if (book.title === '') return;
+    if (book.title === '' || book.category === '') return;
     dispatch(createBookAction(book));
+    setbook({
+      title: '',
+      id: '',
+      category: '',
+    });
   };
 
   return (
@@ -43,6 +48,7 @@ const BooksForm = () => {
             name="title"
             placeholder="Enter the book's title"
             onChange={onSelectChange}
+            value={book.title}
           />
         </label>
       </div>
