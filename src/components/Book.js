@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
+import { Button } from 'react-bootstrap';
 import { deleteBookAction } from '../actions';
 
 const Book = ({ book }) => {
@@ -15,9 +16,9 @@ const Book = ({ book }) => {
       <td className="category">{category}</td>
       <td className="id">{id}</td>
       <td className="deleteBook">
-        <button type="button" onClick={() => deleteBook(book)}>
+        <Button type="button" onClick={() => deleteBook(book)}>
           Delete
-        </button>
+        </Button>
       </td>
     </tr>
   );

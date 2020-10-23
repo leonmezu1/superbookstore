@@ -1,4 +1,4 @@
-import { CREATEBOOK, REMOVEBOOK } from '../types';
+import { CREATEBOOK, REMOVEBOOK, CHANGEFILTER } from '../types';
 
 const createBook = book => ({
   type: CREATEBOOK,
@@ -10,6 +10,11 @@ const deleteBook = book => ({
   book,
 });
 
+const changeFilter = filter => ({
+  type: CHANGEFILTER,
+  filter,
+});
+
 export const createBookAction = book => dispatch => {
   const newBook = book;
   newBook.id = Math.floor(Math.random() * 100).toString();
@@ -18,4 +23,8 @@ export const createBookAction = book => dispatch => {
 
 export const deleteBookAction = book => dispatch => {
   dispatch(deleteBook(book));
+};
+
+export const changeFilterAction = filter => dispatch => {
+  dispatch(changeFilter(filter));
 };

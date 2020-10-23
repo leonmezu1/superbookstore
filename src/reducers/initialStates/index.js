@@ -3,17 +3,17 @@ export const booksInitialState = {
     {
       title: 'Harry Potter',
       id: '1022g',
-      category: 'fiction',
+      category: 'Action',
     },
     {
       title: 'Capitalist Realism',
       id: '1023g',
-      category: 'documentary',
+      category: 'Action',
     },
     {
       title: '100 years of solitude',
       id: '1024g',
-      category: 'fiction',
+      category: 'Action',
     },
   ],
 };
