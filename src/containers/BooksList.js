@@ -13,6 +13,7 @@ const BooksList = () => {
             <td>Title</td>
             <td>Category</td>
             <td>id</td>
+            <td>Delete</td>
           </tr>
         </thead>
         <tbody>
