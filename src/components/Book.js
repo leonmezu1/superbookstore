@@ -14,7 +14,7 @@ const Book = ({ book }) => {
       <td className="title">{title}</td>
       <td className="category">{category}</td>
       <td className="id">{id}</td>
-      <td><button type="button" onClick={() => handleBookRemove(book)}>Delent</button></td>
+      <td><button type="button" onClick={() => handleBookRemove(book)}>Remove Book</button></td>
     </tr>
   );
 };
