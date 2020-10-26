@@ -8,7 +8,7 @@ export default (state = booksInitialState, action) => {
     case CREATEBOOK:
       return {
         ...state,
-        books: [...state.books, action.book],
+        books: [...state.books, action.payload],
       };
     case REMOVEBOOK:
       return {

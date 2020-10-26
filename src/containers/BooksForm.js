@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { createBookAction } from '../actions';
+import { createBook } from '../actions';
 
 // The bookForm component already has the necessary requirements to pass milestone 3 review.
 
@@ -32,7 +32,7 @@ const BooksForm = () => {
   const submitBook = e => {
     e.preventDefault();
     if (book.title === '') return;
-    dispatch(createBookAction(book));
+    dispatch(createBook(book));
   };
 
   return (
