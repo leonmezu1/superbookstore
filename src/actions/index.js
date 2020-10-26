@@ -1,21 +1,17 @@
 import { CREATEBOOK, REMOVEBOOK } from '../types';
 
-const createBook = book => ({
-  type: CREATEBOOK,
-  book,
-});
+export const createBook = book => {
+  const newBook = {
+    ...book,
+    id: Math.floor(Math.random() * 100).toString(),
+  };
+  return {
+    type: CREATEBOOK,
+    payload: newBook,
+  };
+};
 
-const deleteBook = book => ({
+export const deleteBook = book => ({
   type: REMOVEBOOK,
-  book,
+  payload: book,
 });
-
-export const createBookAction = book => dispatch => {
-  const newBook = book;
-  newBook.id = Math.floor(Math.random() * 100).toString();
-  dispatch(createBook(newBook));
-};
-
-export const deleteBookAction = book => dispatch => {
-  dispatch(deleteBook(book));
-};
