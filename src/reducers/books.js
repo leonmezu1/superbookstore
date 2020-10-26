@@ -13,7 +13,7 @@ export default (state = booksInitialState, action) => {
     case REMOVEBOOK:
       return {
         ...state,
-        books: state.books.filter(book => book !== action.book),
+        books: state.books.filter(book => book !== action.payload),
       };
     default:
       return state;

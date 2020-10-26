@@ -11,9 +11,9 @@ export const createBook = book => {
   }
 };
 
-const deleteBook = book => ({
+export const deleteBook = book => ({
   type: REMOVEBOOK,
-  book,
+  payload: book,
 });
 
 // export const createBookAction = book => dispatch => {
