@@ -1,4 +1,4 @@
-import { CREATEBOOK, REMOVEBOOK } from '../types';
+import { CREATEBOOK, REMOVEBOOK, CHANGEFILTER } from '../types';
 
 export const createBook = book => {
   const newBook = {
@@ -14,4 +14,9 @@ export const createBook = book => {
 export const deleteBook = book => ({
   type: REMOVEBOOK,
   payload: book,
+});
+
+export const changeFilter = filter => ({
+  type: CHANGEFILTER,
+  filter,
 });
