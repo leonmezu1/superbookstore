@@ -16,7 +16,7 @@ const BooksList = () => {
 
   return (
     <div>
-      <h1>Inside booklists</h1>
+      <h1 className="header">Inside booklists</h1>
       <CategoryFilter handleFilterChange={handleFilterChange} />
       <Table striped bordered hover>
         <thead>
