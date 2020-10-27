@@ -16,16 +16,15 @@ const BooksList = () => {
 
   return (
     <div>
-      <h1 className="header">Inside booklists</h1>
-      <CategoryFilter handleFilterChange={handleFilterChange} />
+      <nav className="navbar">
+        <h1 className="header">Inside booklists</h1>
+        <CategoryFilter handleFilterChange={handleFilterChange} />
+      </nav>
       <Table striped bordered hover>
         <thead>
           <tr>
-            <td>Title</td>
-            <td>Author</td>
-            <td>Title</td>
-            <td>id</td>
-            <td>Eliminate</td>
+            <td></td>
+            <td></td>
           </tr>
         </thead>
         <tbody>
