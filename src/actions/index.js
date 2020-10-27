@@ -1,9 +1,13 @@
-import { CREATEBOOK, REMOVEBOOK } from '../types';
+import { v4 } from 'uuid';
+import { CREATEBOOK, REMOVEBOOK, CHANGEFILTER } from '../types';
 
 export const createBook = book => {
+/* eslint-disable global-require */
+  const random = require('random-name');
   const newBook = {
     ...book,
-    id: Math.floor(Math.random() * 100).toString(),
+    id: v4(),
+    author: random(),
   };
   return {
     type: CREATEBOOK,
@@ -14,4 +18,9 @@ export const createBook = book => {
 export const deleteBook = book => ({
   type: REMOVEBOOK,
   payload: book,
+});
+
+export const changeFilter = filter => ({
+  type: CHANGEFILTER,
+  filter,
 });

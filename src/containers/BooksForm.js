@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { Form, Button } from 'react-bootstrap';
 import { createBook } from '../actions';
-
-// The bookForm component already has the necessary requirements to pass milestone 3 review.
 
 const BooksForm = () => {
   const dispatch = useDispatch();
@@ -36,35 +35,32 @@ const BooksForm = () => {
   };
 
   return (
-    <form onSubmit={submitBook}>
-      <div className="group-control">
-        <label htmlFor="title">
-          Title
-          <input
-            type="text"
-            name="title"
-            placeholder="Enter the book's title"
-            onChange={onSelectChange}
-          />
-        </label>
-      </div>
-      <div className="group-control">
-        <label htmlFor="category">
-          Category
-          <select name="category" onChange={onSelectChange}>
-            <option value="">Select a category</option>
-            {categoryArray.map(category => (
-              <option key={category} value={category}>
-                {category}
-              </option>
-            ))}
-          </select>
-        </label>
-      </div>
-      <button type="submit" className="btn-primary">
+    <Form onSubmit={submitBook}>
+      <Form.Group controlId="bookFormTitle">
+        <Form.Label>Title</Form.Label>
+        <Form.Control
+          type="text"
+          name="title"
+          placeholder="Enter the book's title"
+          onChange={onSelectChange}
+          value={book.title}
+        />
+      </Form.Group>
+      <Form.Group controlId="bookFormCategorySelect">
+        <Form.Label>Category</Form.Label>
+        <Form.Control as="select" name="category" onChange={onSelectChange}>
+          <option value="">Select a category</option>
+          {categoryArray.map(category => (
+            <option key={category} value={category}>
+              {category}
+            </option>
+          ))}
+        </Form.Control>
+      </Form.Group>
+      <Button type="submit" className="btn-primary">
         Add book
-      </button>
-    </form>
+      </Button>
+    </Form>
   );
 };
 

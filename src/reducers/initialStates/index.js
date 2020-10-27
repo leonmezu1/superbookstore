@@ -1,19 +1,26 @@
+import { v4 } from 'uuid';
+
+const random = require('random-name');
+
 export const booksInitialState = {
   books: [
     {
       title: 'Harry Potter',
-      id: '1022g',
-      category: 'fiction',
+      id: v4(),
+      category: 'Action',
+      author: random(),
     },
     {
       title: 'Capitalist Realism',
-      id: '1023g',
-      category: 'documentary',
+      id: v4(),
+      category: 'Action',
+      author: random(),
     },
     {
       title: '100 years of solitude',
-      id: '1024g',
-      category: 'fiction',
+      id: v4(),
+      category: 'Action',
+      author: random(),
     },
   ],
 };
