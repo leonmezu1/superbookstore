@@ -1,9 +1,12 @@
+import { v4 } from 'uuid';
 import { CREATEBOOK, REMOVEBOOK, CHANGEFILTER } from '../types';
 
 export const createBook = book => {
+  const random = require('random-name');
   const newBook = {
     ...book,
-    id: Math.floor(Math.random() * 100).toString(),
+    id: v4(),
+    author: random(),
   };
   return {
     type: CREATEBOOK,

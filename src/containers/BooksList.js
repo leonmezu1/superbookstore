@@ -22,7 +22,8 @@ const BooksList = () => {
         <thead>
           <tr>
             <td>Title</td>
-            <td>Category</td>
+            <td>Author</td>
+            <td>Title</td>
             <td>id</td>
             <td>Eliminate</td>
           </tr>
