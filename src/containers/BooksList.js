@@ -16,7 +16,7 @@ const BooksList = () => {
 
   return (
     <div>
-      <nav className="navbar">
+      <nav className="navbar sticky-top">
         <div className="container d-flex justify-content-start align-items-center">
           <span className="header ml">Bookstore CMS</span>
           <a
