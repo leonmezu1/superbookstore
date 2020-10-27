@@ -6,7 +6,9 @@ import { deleteBook } from '../actions/index';
 
 const Book = ({ book }) => {
   const dispatch = useDispatch();
-  const { title, id, category, author } = book;
+  const {
+    title, id, category, author,
+  } = book;
   const handleBookRemove = book => {
     dispatch(deleteBook(book));
   };
@@ -30,6 +32,7 @@ Book.propTypes = {
     title: PropTypes.string,
     id: PropTypes.string,
     category: PropTypes.string,
+    author: PropTypes.string,
   }).isRequired,
 };
 

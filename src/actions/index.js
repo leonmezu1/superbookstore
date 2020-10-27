@@ -2,6 +2,7 @@ import { v4 } from 'uuid';
 import { CREATEBOOK, REMOVEBOOK, CHANGEFILTER } from '../types';
 
 export const createBook = book => {
+/* eslint-disable global-require */
   const random = require('random-name');
   const newBook = {
     ...book,
