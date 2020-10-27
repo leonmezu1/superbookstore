@@ -17,16 +17,21 @@ const BooksList = () => {
   return (
     <div>
       <nav className="navbar">
-        <h1 className="header">Inside booklists</h1>
-        <CategoryFilter handleFilterChange={handleFilterChange} />
+        <div className="container d-flex justify-content-start align-items-center">
+          <span className="header ml">Bookstore CMS</span>
+          <a
+            href="#!"
+            className="books-link ml-5 text-uppercase"
+            onClick={() => {
+              dispatch(changeFilter('All'));
+            }}
+          >
+            Books
+          </a>
+          <CategoryFilter handleFilterChange={handleFilterChange} />
+        </div>
       </nav>
-      <Table striped bordered hover>
-        <thead>
-          <tr>
-            <td></td>
-            <td></td>
-          </tr>
-        </thead>
+      <Table borderless className="container">
         <tbody>
           {books
             .filter(book => book.category === filter || filter === 'All')
