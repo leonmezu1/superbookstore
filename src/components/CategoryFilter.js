@@ -18,7 +18,8 @@ const CategoryFilter = ({ handleFilterChange }) => {
     <Form.Control
       as="select"
       name="category"
-      className="category-filter"
+      className="category-filter w-25 mr-auto ml-5"
+      size="sm"
       onChange={handleFilterChange}
     >
       {categories.map(category => (

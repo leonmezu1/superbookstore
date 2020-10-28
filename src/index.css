@@ -1,10 +1,76 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
+
+body {
+  background-color: #f5f6fa;
+}
 
 .header {
   font-family: 'Poppins', sans-serif;
+  color: #0290ff;
+  font-weight: 800;
+  font-size: 2.5rem;
 }
 
 .title {
   font-family: 'Arvo', serif;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.navbar {
+  display: flex;
+  background-color: #fff;
+  border-bottom: 1px solid lightgray;
+}
+
+.category {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  color: rgb(100, 97, 97);
+}
+
+.author {
+  font-family: 'Arvo', serif;
+  font-size: 13px;
+  color: #0290ff;
+}
+
+.id {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 200;
+  font-size: 13px;
+  color: #38a9ff;
+}
+
+.app-wrapper {
+  padding: 2rem;
+}
+
+.mt-30 {
+  margin-top: 34%;
+}
+
+.w-70 {
+  width: 70%;
+}
+
+.w-65 {
+  width: 65%;
+}
+
+.w-35 {
+  width: 35%;
+}
+
+.books-link {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 200;
+  color: rgb(116, 116, 116);
+}
+
+.books-link:hover {
+  text-decoration: none;
 }

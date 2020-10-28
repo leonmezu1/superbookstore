@@ -14,14 +14,20 @@ const Book = ({ book }) => {
   };
   return (
     <tr>
-      <td className="title">{title}</td>
-      <td className="author">{author}</td>
-      <td className="category">{category}</td>
-      <td className="id">{id}</td>
       <td>
-        <Button type="button" onClick={() => handleBookRemove(book)}>
-          Remove Book
-        </Button>
+        <div className="d-flex mt-3 p-3 border rounded-sm bg-white">
+          <div className="book-content flex-column w-65 border-right border-silver">
+            <div className="category">{category}</div>
+            <div className="title">{title}</div>
+            <div className="author">{author}</div>
+            <div className="id">{id}</div>
+          </div>
+          <div className="book-actions p-3 d-flex align-items-center justify-content-center w-35">
+            <Button type="button" onClick={() => handleBookRemove(book)}>
+              Remove Book
+            </Button>
+          </div>
+        </div>
       </td>
     </tr>
   );
